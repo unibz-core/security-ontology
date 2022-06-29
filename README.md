@@ -25,4 +25,4 @@ ROSE is a well-founded reference ontology, specified in OntoUML modeling languag
 
 ## References
 
-- To appear.
+- Baratella, R., Fumagalli, M., Oliveira, Í., Guizzardi, G. (2022). Understanding and Modeling Prevention. In: Guizzardi, R., Ralyté, J., Franch, X. (eds) Research Challenges in Information Science. RCIS 2022. Lecture Notes in Business Information Processing, vol 446. Springer, Cham. https://doi.org/10.1007/978-3-031-05760-1_23
