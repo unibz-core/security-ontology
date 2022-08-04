@@ -5,10 +5,12 @@ ROSE is a well-founded reference ontology, specified in OntoUML modeling languag
 ## Project Struture
 
 * [/ontouml](/ontouml) contains files related to the conceptual version of ROSE, which is represented in OntoUML.
+* [/owl](/owl) contains files related to the [gUFO-based](https://nemo-ufes.github.io/gufo/) implementation of ROSE, represented in OWL.
 
 ## Reusing .vpp files
 
 * To open and edit .vpp files, use [Visual Paradigm](https://www.visual-paradigm.com)
+* To open and edit .ttl files, use [Protégé](https://protege.stanford.edu/)
 
 ## Built with
 
