@@ -27,3 +27,7 @@ ROSE is a well-founded reference ontology, specified in OntoUML modeling languag
 
 - Baratella, R., Fumagalli, M., Oliveira, Í., Guizzardi, G. (2022). Understanding and Modeling Prevention. In: Guizzardi, R., Ralyté, J., Franch, X. (eds) Research Challenges in Information Science. RCIS 2022. Lecture Notes in Business Information Processing, vol 446. Springer, Cham. https://doi.org/10.1007/978-3-031-05760-1_23
 - Oliveira, Í., Prince Sales, T., Baratella, R., Fumagalli, M., Guizzardi, G. (2022). An Ontology of Security from a Risk Treatment Perspective. Accepted in 41st International Conference on Conceptual Modeling. ER 2022.
+
+## Errata
+
+- In ROSE, the cardinality of <<characterization>> relation between Intention and subjects (Risk Subject, Attacker, Protected Subject, and Security Designer) should be 0...1, instead of 1, as it is written in the paper. This repository already contains the corrected version.
