@@ -1,0 +1,1492 @@
+@prefix : <http://rose.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rose.com> .
+
+<http://rose.com> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/nemo/gufo#categorizes
+gufo:categorizes rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/nemo/gufo#broughtAbout
+gufo:broughtAbout rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#contributedToTrigger
+gufo:contributedToTrigger rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#historicallyDependsOn
+gufo:historicallyDependsOn rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#inheresIn
+gufo:inheresIn rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#manifestedIn
+gufo:manifestedIn rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#participatedIn
+gufo:participatedIn rdf:type owl:ObjectProperty .
+
+
+###  http://rose.com#bringingAboutOf
+:bringingAboutOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ControlEventType ;
+                 rdfs:range :ControlledSituationType ;
+                 rdfs:label "bringing about of"@en .
+
+
+###  http://rose.com#causation
+:causation rdf:type owl:ObjectProperty ;
+           rdfs:domain :ThreatEventType ;
+           rdfs:range :LossEventType ;
+           rdfs:label "causation"@en .
+
+
+###  http://rose.com#causedBy
+:causedBy rdf:type owl:ObjectProperty ;
+          rdfs:domain :UFOAction ;
+          rdfs:range :Intention ;
+          rdfs:label "caused by"@en .
+
+
+###  http://rose.com#causedBy_1
+:causedBy_1 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :causedBy ;
+            rdfs:domain :Attack ;
+            rdfs:range :Intention ;
+            rdfs:label "caused by"@en .
+
+
+###  http://rose.com#causes_2
+:causes_2 rdf:type owl:ObjectProperty ;
+          rdfs:domain :RiskEvent ;
+          rdfs:range :RiskEvent ;
+          rdfs:label "causes"@en .
+
+
+###  http://rose.com#countermeasureTo
+:countermeasureTo rdf:type owl:ObjectProperty ;
+                  rdfs:domain :SecurityMechanism ;
+                  rdfs:range :RiskEventType ;
+                  rdfs:label "countermeasure to"@en .
+
+
+###  http://rose.com#creates
+:creates rdf:type owl:ObjectProperty ;
+         rdfs:domain :UFOAgent ;
+         rdfs:range :UFOAction ;
+         rdfs:label "creates"@en .
+
+
+###  http://rose.com#creates_1
+:creates_1 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :creates ;
+           rdfs:domain :Attacker ;
+           rdfs:range :Attack ;
+           rdfs:label "creates"@en .
+
+
+###  http://rose.com#designedBy
+:designedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :SecurityMechanism ;
+            rdfs:range :SecurityDesigner ;
+            rdfs:label "designed by"@en .
+
+
+###  http://rose.com#directlyCauses
+:directlyCauses rdf:type owl:ObjectProperty ;
+                rdfs:domain :ValueEvent ;
+                rdfs:range :ValueEvent ;
+                rdfs:label "directly causes"@en .
+
+
+###  http://rose.com#experienceRiskAssesmentHasIntention
+:experienceRiskAssesmentHasIntention rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :ExperienceRiskAssesment ;
+                                     rdfs:range :Intention .
+
+
+###  http://rose.com#experienceRiskAssesmentHasThreatCapability
+:experienceRiskAssesmentHasThreatCapability rdf:type owl:ObjectProperty ;
+                                            rdfs:domain :ExperienceRiskAssesment ;
+                                            rdfs:range :ThreatCapability .
+
+
+###  http://rose.com#experienceRiskAssesmentHasVulnerability
+:experienceRiskAssesmentHasVulnerability rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :ExperienceRiskAssesment ;
+                                         rdfs:range :Vulnerability .
+
+
+###  http://rose.com#experienceValueAscHasDisposition
+:experienceValueAscHasDisposition rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :ExperienceValueAsc ;
+                                  rdfs:range :Disposition .
+
+
+###  http://rose.com#experienceValueAscHasIntention
+:experienceValueAscHasIntention rdf:type owl:ObjectProperty ;
+                                rdfs:domain :ExperienceValueAsc ;
+                                rdfs:range :Intention .
+
+
+###  http://rose.com#hurts
+:hurts rdf:type owl:ObjectProperty ;
+       rdfs:domain :LossSituation ;
+       rdfs:range :Intention ;
+       rdfs:label "hurts"@en .
+
+
+###  http://rose.com#hurts_1
+:hurts_1 rdf:type owl:ObjectProperty ;
+         rdfs:domain :LossEvent ;
+         rdfs:range :Intention ;
+         rdfs:label "hurts"@en .
+
+
+###  http://rose.com#impacts
+:impacts rdf:type owl:ObjectProperty ;
+         rdfs:domain :ImpactfulOutcome ;
+         rdfs:range :Intention ;
+         rdfs:label "impacts"@en .
+
+
+###  http://rose.com#impacts_1
+:impacts_1 rdf:type owl:ObjectProperty ;
+           rdfs:domain :ControlledSituation ;
+           rdfs:range :Intention ;
+           rdfs:label "impacts"@en .
+
+
+###  http://rose.com#impacts_2
+:impacts_2 rdf:type owl:ObjectProperty ;
+           rdfs:domain :ImpactEvent ;
+           rdfs:range :Intention ;
+           rdfs:label "impacts"@en .
+
+
+###  http://rose.com#incompatibleWith
+:incompatibleWith rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ControlledSituationType ;
+                  rdfs:range :LossTriggeringSituationType ;
+                  rdfs:label "incompatible with"@en .
+
+
+###  http://rose.com#incompatibleWith_1
+:incompatibleWith_1 rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ControlledSituationType ;
+                    rdfs:range :ThreateningSituationType ;
+                    rdfs:label "incompatible with"@en .
+
+
+###  http://rose.com#involves
+:involves rdf:type owl:ObjectProperty ;
+          rdfs:domain :RiskAssessment ;
+          rdfs:range :RiskAssessor ;
+          rdfs:label "involves"@en .
+
+
+###  http://rose.com#involves_1
+:involves_1 rdf:type owl:ObjectProperty ;
+            rdfs:domain :ValueAscription ;
+            rdfs:range :ValueAssessor ;
+            rdfs:label "involves"@en .
+
+
+###  http://rose.com#involves_2
+:involves_2 rdf:type owl:ObjectProperty ;
+            rdfs:domain :ObjectRiskAssesment ;
+            rdfs:range :ObjectAtRisk ;
+            rdfs:label "involves"@en .
+
+
+###  http://rose.com#involves_3
+:involves_3 rdf:type owl:ObjectProperty ;
+            rdfs:domain :ExperienceValueAsc ;
+            rdfs:range :ValueExperience ;
+            rdfs:label "involves"@en .
+
+
+###  http://rose.com#involves_4
+:involves_4 rdf:type owl:ObjectProperty ;
+            rdfs:domain :ObjectValueAsc ;
+            rdfs:range :ValueObject ;
+            rdfs:label "involves"@en .
+
+
+###  http://rose.com#manifestation
+:manifestation rdf:type owl:ObjectProperty ;
+               rdfs:domain :ControlEventType ;
+               rdfs:range :ControlCapabilityType ;
+               rdfs:label "manifestation"@en .
+
+
+###  http://rose.com#manifestedBy
+:manifestedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Disposition ;
+              rdfs:range :ValueEvent ;
+              rdfs:label "manifested by"@en .
+
+
+###  http://rose.com#mutualActivationPartnership
+:mutualActivationPartnership rdf:type owl:ObjectProperty ;
+                             rdfs:domain :ThreatCapabilityType ;
+                             rdfs:range :VulnerabilityType ;
+                             rdfs:label "mutual activation partnership"@en .
+
+
+###  http://rose.com#mutualActivationPartnership_1
+:mutualActivationPartnership_1 rdf:type owl:ObjectProperty ;
+                               rdfs:domain :ThreatCapabilityType ;
+                               rdfs:range :IntentionType ;
+                               rdfs:label "mutual activation partnership"@en .
+
+
+###  http://rose.com#objectRiskAssesmentHasExperienceRiskAssesment
+:objectRiskAssesmentHasExperienceRiskAssesment rdf:type owl:ObjectProperty ;
+                                               rdfs:domain :ObjectRiskAssesment ;
+                                               rdfs:range :ExperienceRiskAssesment .
+
+
+###  http://rose.com#objectValueAscHasExperienceValueAsc
+:objectValueAscHasExperienceValueAsc rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :ObjectValueAsc ;
+                                     rdfs:range :ExperienceValueAsc .
+
+
+###  http://rose.com#participatesIn
+:participatesIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :ValueSubject ;
+                rdfs:range :ValueExperience ;
+                rdfs:label "participates in"@en .
+
+
+###  http://rose.com#participatesIn_1
+:participatesIn_1 rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ValueEnabler ;
+                  rdfs:range :ValueExperience ;
+                  rdfs:label "participates in"@en .
+
+
+###  http://rose.com#participatesIn_2
+:participatesIn_2 rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ValueObject ;
+                  rdfs:range :ValueExperience ;
+                  rdfs:label "participates in"@en .
+
+
+###  http://rose.com#participatesIn_3
+:participatesIn_3 rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ValueEnabler ;
+                  rdfs:range :ValueEvent ;
+                  rdfs:label "participates in"@en .
+
+
+###  http://rose.com#prevention
+:prevention rdf:type owl:ObjectProperty ;
+            rdfs:domain :ControlEventType ;
+            rdfs:range :RiskEventType ;
+            rdfs:label "prevention"@en .
+
+
+###  http://rose.com#riskExperienceHasRiskEvent
+:riskExperienceHasRiskEvent rdf:type owl:ObjectProperty ;
+                            rdfs:domain :RiskExperience ;
+                            rdfs:range :RiskEvent .
+
+
+###  http://rose.com#triggering
+:triggering rdf:type owl:ObjectProperty ;
+            rdfs:domain :ThreateningSituationType ;
+            rdfs:range :ThreatEventType ;
+            rdfs:label "triggering"@en .
+
+
+###  http://rose.com#triggering_1
+:triggering_1 rdf:type owl:ObjectProperty ;
+              rdfs:domain :LossTriggeringSituationType ;
+              rdfs:range :LossEventType ;
+              rdfs:label "triggering"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/nemo/gufo#Category
+gufo:Category rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#ConcreteIndividualType
+gufo:ConcreteIndividualType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Event
+gufo:Event rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#EventType
+gufo:EventType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#IntrinsicMode
+gufo:IntrinsicMode rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Quality
+gufo:Quality rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Relator
+gufo:Relator rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#RoleMixin
+gufo:RoleMixin rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Situation
+gufo:Situation rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SituationType
+gufo:SituationType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+###  http://rose.com#Attack
+:Attack rdf:type owl:Class ;
+        rdfs:subClassOf :ThreatEvent ,
+                        :UFOAction .
+
+
+###  http://rose.com#Attacker
+:Attacker rdf:type owl:Class ;
+          rdfs:subClassOf :ThreatObject ,
+                          :UFOAgent ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                           ] ;
+                            owl:someValuesFrom :Intention
+                          ] .
+
+
+###  http://rose.com#CausalLikelihood
+:CausalLikelihood rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:Quality ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty gufo:inheresIn ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :UFOEventType
+                                  ] .
+
+
+###  http://rose.com#ControlCapability
+:ControlCapability rdf:type owl:Class ;
+                   rdfs:subClassOf :Disposition ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty gufo:inheresIn ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :SecurityMechanism
+                                   ] .
+
+
+###  http://rose.com#ControlCapabilityType
+:ControlCapabilityType rdf:type owl:Class ;
+                       rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#ControlChainEvent
+:ControlChainEvent rdf:type owl:Class ;
+                   rdfs:subClassOf :ProtectionEvent .
+
+
+###  http://rose.com#ControlEvent
+:ControlEvent rdf:type owl:Class ;
+              rdfs:subClassOf :ProtectionEvent ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:broughtAbout ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :ControlledSituation
+                              ] .
+
+
+###  http://rose.com#ControlEventType
+:ControlEventType rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#ControlledSituation
+:ControlledSituation rdf:type owl:Class ;
+                     rdfs:subClassOf gufo:Situation .
+
+
+###  http://rose.com#ControlledSituationType
+:ControlledSituationType rdf:type owl:Class ;
+                         rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#Disposition
+:Disposition rdf:type owl:Class ;
+             rdfs:subClassOf gufo:IntrinsicMode .
+
+
+###  http://rose.com#ExperienceRiskAssesment
+:ExperienceRiskAssesment rdf:type owl:Class ;
+                         rdfs:subClassOf :RiskAssessment ;
+                         owl:disjointWith :ObjectRiskAssesment .
+
+
+###  http://rose.com#ExperienceValueAsc
+:ExperienceValueAsc rdf:type owl:Class ;
+                    rdfs:subClassOf :ValueAscription ;
+                    owl:disjointWith :ObjectValueAsc .
+
+
+###  http://rose.com#GenericIntention
+:GenericIntention rdf:type owl:Class ;
+                  rdfs:subClassOf :Intention ;
+                  owl:disjointWith :SpecificIntention .
+
+
+###  http://rose.com#ImpactEvent
+:ImpactEvent rdf:type owl:Class ;
+             rdfs:subClassOf :ValueEvent ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf gufo:historicallyDependsOn
+                                              ] ;
+                               owl:someValuesFrom :TriggerEvent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:broughtAbout ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :ImpactfulOutcome
+                             ] ;
+             owl:disjointWith :TriggerEvent .
+
+
+###  http://rose.com#ImpactfulOutcome
+:ImpactfulOutcome rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:Situation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gufo:broughtAbout
+                                                   ] ;
+                                    owl:someValuesFrom :ImpactEvent
+                                  ] .
+
+
+###  http://rose.com#Intention
+:Intention rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:unionOf ( :GenericIntention
+                                               :SpecificIntention
+                                             )
+                               ] ;
+           rdfs:subClassOf gufo:IntrinsicMode .
+
+
+###  http://rose.com#IntentionType
+:IntentionType rdf:type owl:Class ;
+               rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#LossEvent
+:LossEvent rdf:type owl:Class ;
+           rdfs:subClassOf :RiskEvent ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:broughtAbout ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :LossSituation
+                           ] .
+
+
+###  http://rose.com#LossEventType
+:LossEventType rdf:type owl:Class ;
+               rdfs:subClassOf :RiskEventType .
+
+
+###  http://rose.com#LossSituation
+:LossSituation rdf:type owl:Class ;
+               rdfs:subClassOf gufo:Situation ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:broughtAbout
+                                                ] ;
+                                 owl:someValuesFrom :LossEvent
+                               ] .
+
+
+###  http://rose.com#LossSituationType
+:LossSituationType rdf:type owl:Class ;
+                   rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#LossTriggeringSituation
+:LossTriggeringSituation rdf:type owl:Class ;
+                         rdfs:subClassOf gufo:Situation .
+
+
+###  http://rose.com#LossTriggeringSituationType
+:LossTriggeringSituationType rdf:type owl:Class ;
+                             rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#ObjectAtRisk
+:ObjectAtRisk rdf:type owl:Class ;
+              rdfs:subClassOf gufo:FunctionalComplex ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:participatedIn ;
+                                owl:someValuesFrom :RiskExperience
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                               ] ;
+                                owl:someValuesFrom :Vulnerability
+                              ] .
+
+
+###  http://rose.com#ObjectRiskAssesment
+:ObjectRiskAssesment rdf:type owl:Class ;
+                     rdfs:subClassOf :RiskAssessment .
+
+
+###  http://rose.com#ObjectValueAsc
+:ObjectValueAsc rdf:type owl:Class ;
+                rdfs:subClassOf :ValueAscription .
+
+
+###  http://rose.com#ProtectedSubject
+:ProtectedSubject rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:FunctionalComplex ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                   ] ;
+                                    owl:someValuesFrom :Intention
+                                  ] .
+
+
+###  http://rose.com#ProtectionEvent
+:ProtectionEvent rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( :ControlChainEvent
+                                                     :ControlEvent
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf gufo:Event ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf gufo:manifestedIn
+                                                  ] ;
+                                   owl:someValuesFrom :ControlCapability
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf gufo:contributedToTrigger
+                                                  ] ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :ProtectionTrigger
+                                 ] .
+
+
+###  http://rose.com#ProtectionTrigger
+:ProtectionTrigger rdf:type owl:Class ;
+                   rdfs:subClassOf gufo:Situation .
+
+
+###  http://rose.com#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf gufo:Quality ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty gufo:inheresIn ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :RiskAssessment
+                      ] .
+
+
+###  http://rose.com#RiskAssessment
+:RiskAssessment rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( :ExperienceRiskAssesment
+                                                    :ObjectRiskAssesment
+                                                  )
+                                    ] ;
+                rdfs:subClassOf gufo:Relator ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                 ] ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Risk
+                                ] .
+
+
+###  http://rose.com#RiskAssessor
+:RiskAssessor rdf:type owl:Class ;
+              rdfs:subClassOf :UFOAgent .
+
+
+###  http://rose.com#RiskEnabler
+:RiskEnabler rdf:type owl:Class ;
+             rdfs:subClassOf gufo:FunctionalComplex ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:participatedIn ;
+                               owl:someValuesFrom :RiskEvent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:participatedIn ;
+                               owl:someValuesFrom :RiskExperience
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                              ] ;
+                               owl:someValuesFrom :Vulnerability
+                             ] .
+
+
+###  http://rose.com#RiskEvent
+:RiskEvent rdf:type owl:Class ;
+           rdfs:subClassOf gufo:Event ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:manifestedIn
+                                            ] ;
+                             owl:someValuesFrom :Vulnerability
+                           ] .
+
+
+###  http://rose.com#RiskEventType
+:RiskEventType rdf:type owl:Class ;
+               rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#RiskExperience
+:RiskExperience rdf:type owl:Class ;
+                rdfs:subClassOf gufo:Event ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf gufo:participatedIn
+                                                 ] ;
+                                  owl:someValuesFrom :RiskSubject
+                                ] .
+
+
+###  http://rose.com#RiskSubject
+:RiskSubject rdf:type owl:Class ;
+             rdfs:subClassOf :UFOAgent ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:participatedIn ;
+                               owl:someValuesFrom :RiskExperience
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                              ] ;
+                               owl:someValuesFrom :Intention
+                             ] .
+
+
+###  http://rose.com#SecurityDesigner
+:SecurityDesigner rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:FunctionalComplex ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                   ] ;
+                                    owl:someValuesFrom :Intention
+                                  ] .
+
+
+###  http://rose.com#SecurityMechanism
+:SecurityMechanism rdf:type owl:Class ;
+                   rdfs:subClassOf gufo:FunctionalComplex ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                    ] ;
+                                     owl:someValuesFrom :ControlCapability
+                                   ] .
+
+
+###  http://rose.com#SpecificIntention
+:SpecificIntention rdf:type owl:Class ;
+                   rdfs:subClassOf :Intention .
+
+
+###  http://rose.com#ThreatCapability
+:ThreatCapability rdf:type owl:Class ;
+                  rdfs:subClassOf :Disposition ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty gufo:manifestedIn ;
+                                    owl:someValuesFrom :ThreatEvent
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty gufo:inheresIn ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :ThreatObject
+                                  ] .
+
+
+###  http://rose.com#ThreatCapabilityType
+:ThreatCapabilityType rdf:type owl:Class ;
+                      rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#ThreatEvent
+:ThreatEvent rdf:type owl:Class ;
+             rdfs:subClassOf :RiskEvent ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf gufo:contributedToTrigger
+                                              ] ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :ThreateningSituation
+                             ] .
+
+
+###  http://rose.com#ThreatEventType
+:ThreatEventType rdf:type owl:Class ;
+                 rdfs:subClassOf :RiskEventType .
+
+
+###  http://rose.com#ThreatObject
+:ThreatObject rdf:type owl:Class ;
+              rdfs:subClassOf gufo:FunctionalComplex ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:participatedIn ;
+                                owl:someValuesFrom :RiskExperience
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:participatedIn ;
+                                owl:someValuesFrom :ThreatEvent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                               ] ;
+                                owl:someValuesFrom :ThreatCapability
+                              ] .
+
+
+###  http://rose.com#ThreateningSituation
+:ThreateningSituation rdf:type owl:Class ;
+                      rdfs:subClassOf gufo:Situation .
+
+
+###  http://rose.com#ThreateningSituationType
+:ThreateningSituationType rdf:type owl:Class ;
+                          rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#TriggerEvent
+:TriggerEvent rdf:type owl:Class ;
+              rdfs:subClassOf :ValueEvent ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:historicallyDependsOn ;
+                                owl:someValuesFrom :ImpactEvent
+                              ] .
+
+
+###  http://rose.com#TriggeringLikelihood
+:TriggeringLikelihood rdf:type owl:Class ;
+                      rdfs:subClassOf gufo:Quality ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty gufo:inheresIn ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :UFOSituationType
+                                      ] .
+
+
+###  http://rose.com#UFOAction
+:UFOAction rdf:type owl:Class ;
+           rdfs:subClassOf gufo:Event .
+
+
+###  http://rose.com#UFOAgent
+:UFOAgent rdf:type owl:Class ;
+          rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://rose.com#UFOEvent
+:UFOEvent rdf:type owl:Class ;
+          rdfs:subClassOf gufo:Event ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf gufo:contributedToTrigger
+                                           ] ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :UFOSituation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty gufo:broughtAbout ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :UFOSituation
+                          ] .
+
+
+###  http://rose.com#UFOEventType
+:UFOEventType rdf:type owl:Class ;
+              rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#UFOSituation
+:UFOSituation rdf:type owl:Class ;
+              rdfs:subClassOf gufo:Situation .
+
+
+###  http://rose.com#UFOSituationType
+:UFOSituationType rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+###  http://rose.com#Value
+:Value rdf:type owl:Class ;
+       rdfs:subClassOf gufo:Quality ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty gufo:inheresIn ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :ValueAscription
+                       ] .
+
+
+###  http://rose.com#ValueAscription
+:ValueAscription rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( :ExperienceValueAsc
+                                                     :ObjectValueAsc
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf gufo:Relator ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                  ] ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Value
+                                 ] .
+
+
+###  http://rose.com#ValueAssessor
+:ValueAssessor rdf:type owl:Class ;
+               rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://rose.com#ValueEnabler
+:ValueEnabler rdf:type owl:Class ;
+              rdfs:subClassOf gufo:FunctionalComplex ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                               ] ;
+                                owl:someValuesFrom :Disposition
+                              ] .
+
+
+###  http://rose.com#ValueEvent
+:ValueEvent rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:unionOf ( :ImpactEvent
+                                                :TriggerEvent
+                                              )
+                                ] ;
+            rdfs:subClassOf gufo:Event .
+
+
+###  http://rose.com#ValueExperience
+:ValueExperience rdf:type owl:Class ;
+                 rdfs:subClassOf gufo:Event .
+
+
+###  http://rose.com#ValueObject
+:ValueObject rdf:type owl:Class ;
+             rdfs:subClassOf gufo:FunctionalComplex ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                              ] ;
+                               owl:someValuesFrom :Disposition
+                             ] .
+
+
+###  http://rose.com#ValueSubject
+:ValueSubject rdf:type owl:Class ;
+              rdfs:subClassOf :UFOAgent ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                               ] ;
+                                owl:someValuesFrom :Intention
+                              ] .
+
+
+###  http://rose.com#Vulnerability
+:Vulnerability rdf:type owl:Class ;
+               rdfs:subClassOf :Disposition ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty gufo:manifestedIn ;
+                                 owl:someValuesFrom :RiskEvent
+                               ] .
+
+
+###  http://rose.com#VulnerabilityType
+:VulnerabilityType rdf:type owl:Class ;
+                   rdfs:subClassOf gufo:ConcreteIndividualType .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rose.com#Attack
+:Attack rdf:type owl:NamedIndividual ,
+                 gufo:EventType .
+
+
+###  http://rose.com#Attacker
+:Attacker rdf:type owl:NamedIndividual ,
+                   gufo:RoleMixin .
+
+
+###  http://rose.com#CausalLikelihood
+:CausalLikelihood rdf:type owl:NamedIndividual ,
+                           gufo:Kind .
+
+
+###  http://rose.com#ControlCapability
+:ControlCapability rdf:type owl:NamedIndividual ,
+                            gufo:RoleMixin .
+
+
+###  http://rose.com#ControlCapabilityType
+:ControlCapabilityType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#ControlChainEvent
+:ControlChainEvent rdf:type owl:NamedIndividual ,
+                            gufo:EventType .
+
+
+###  http://rose.com#ControlEvent
+:ControlEvent rdf:type owl:NamedIndividual ,
+                       gufo:EventType .
+
+
+###  http://rose.com#ControlEventType
+:ControlEventType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#ControlledSituation
+:ControlledSituation rdf:type owl:NamedIndividual ,
+                              gufo:SituationType .
+
+
+###  http://rose.com#ControlledSituationType
+:ControlledSituationType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#Disposition
+:Disposition rdf:type owl:NamedIndividual ,
+                      gufo:Category .
+
+
+###  http://rose.com#ExperienceRiskAssesment
+:ExperienceRiskAssesment rdf:type owl:NamedIndividual ,
+                                  gufo:SubKind .
+
+
+###  http://rose.com#ExperienceValueAsc
+:ExperienceValueAsc rdf:type owl:NamedIndividual ,
+                             gufo:SubKind .
+
+
+###  http://rose.com#GenericIntention
+:GenericIntention rdf:type owl:NamedIndividual ,
+                           gufo:Category .
+
+
+###  http://rose.com#ImpactEvent
+:ImpactEvent rdf:type owl:NamedIndividual ,
+                      gufo:EventType .
+
+
+###  http://rose.com#ImpactfulOutcome
+:ImpactfulOutcome rdf:type owl:NamedIndividual ,
+                           gufo:SituationType .
+
+
+###  http://rose.com#Intention
+:Intention rdf:type owl:NamedIndividual ,
+                    gufo:Category .
+
+
+###  http://rose.com#IntentionType
+:IntentionType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#LossEvent
+:LossEvent rdf:type owl:NamedIndividual ,
+                    gufo:EventType .
+
+
+###  http://rose.com#LossEventType
+:LossEventType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#LossSituation
+:LossSituation rdf:type owl:NamedIndividual ,
+                        gufo:SituationType .
+
+
+###  http://rose.com#LossSituationType
+:LossSituationType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#LossTriggeringSituation
+:LossTriggeringSituation rdf:type owl:NamedIndividual ,
+                                  gufo:SituationType .
+
+
+###  http://rose.com#LossTriggeringSituationType
+:LossTriggeringSituationType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#ObjectAtRisk
+:ObjectAtRisk rdf:type owl:NamedIndividual ,
+                       gufo:RoleMixin .
+
+
+###  http://rose.com#ObjectRiskAssesment
+:ObjectRiskAssesment rdf:type owl:NamedIndividual ,
+                              gufo:SubKind .
+
+
+###  http://rose.com#ObjectValueAsc
+:ObjectValueAsc rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://rose.com#ProtectedSubject
+:ProtectedSubject rdf:type owl:NamedIndividual ,
+                           gufo:RoleMixin .
+
+
+###  http://rose.com#ProtectionEvent
+:ProtectionEvent rdf:type owl:NamedIndividual ,
+                          gufo:EventType .
+
+
+###  http://rose.com#ProtectionTrigger
+:ProtectionTrigger rdf:type owl:NamedIndividual ,
+                            gufo:SituationType .
+
+
+###  http://rose.com#Risk
+:Risk rdf:type owl:NamedIndividual ,
+               gufo:Kind .
+
+
+###  http://rose.com#RiskAssessment
+:RiskAssessment rdf:type owl:NamedIndividual ,
+                         gufo:Kind .
+
+
+###  http://rose.com#RiskAssessor
+:RiskAssessor rdf:type owl:NamedIndividual ,
+                       gufo:RoleMixin .
+
+
+###  http://rose.com#RiskEnabler
+:RiskEnabler rdf:type owl:NamedIndividual ,
+                      gufo:RoleMixin .
+
+
+###  http://rose.com#RiskEvent
+:RiskEvent rdf:type owl:NamedIndividual ,
+                    gufo:EventType .
+
+
+###  http://rose.com#RiskEventType
+:RiskEventType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#RiskExperience
+:RiskExperience rdf:type owl:NamedIndividual ,
+                         gufo:EventType .
+
+
+###  http://rose.com#RiskSubject
+:RiskSubject rdf:type owl:NamedIndividual ,
+                      gufo:RoleMixin .
+
+
+###  http://rose.com#SecurityDesigner
+:SecurityDesigner rdf:type owl:NamedIndividual ,
+                           gufo:RoleMixin .
+
+
+###  http://rose.com#SecurityMechanism
+:SecurityMechanism rdf:type owl:NamedIndividual ,
+                            gufo:RoleMixin .
+
+
+###  http://rose.com#SpecificIntention
+:SpecificIntention rdf:type owl:NamedIndividual ,
+                            gufo:Category .
+
+
+###  http://rose.com#ThreatCapability
+:ThreatCapability rdf:type owl:NamedIndividual ,
+                           gufo:RoleMixin .
+
+
+###  http://rose.com#ThreatCapabilityType
+:ThreatCapabilityType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#ThreatEvent
+:ThreatEvent rdf:type owl:NamedIndividual ,
+                      gufo:EventType .
+
+
+###  http://rose.com#ThreatEventType
+:ThreatEventType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#ThreatObject
+:ThreatObject rdf:type owl:NamedIndividual ,
+                       gufo:RoleMixin .
+
+
+###  http://rose.com#ThreateningSituation
+:ThreateningSituation rdf:type owl:NamedIndividual ,
+                               gufo:SituationType .
+
+
+###  http://rose.com#ThreateningSituationType
+:ThreateningSituationType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#TriggerEvent
+:TriggerEvent rdf:type owl:NamedIndividual ,
+                       gufo:EventType .
+
+
+###  http://rose.com#TriggeringLikelihood
+:TriggeringLikelihood rdf:type owl:NamedIndividual ,
+                               gufo:Kind .
+
+
+###  http://rose.com#UFOAction
+:UFOAction rdf:type owl:NamedIndividual ,
+                    gufo:EventType .
+
+
+###  http://rose.com#UFOAgent
+:UFOAgent rdf:type owl:NamedIndividual ,
+                   gufo:Category .
+
+
+###  http://rose.com#UFOEvent
+:UFOEvent rdf:type owl:NamedIndividual ,
+                   gufo:EventType .
+
+
+###  http://rose.com#UFOEventType
+:UFOEventType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#UFOSituation
+:UFOSituation rdf:type owl:NamedIndividual ,
+                       gufo:SituationType .
+
+
+###  http://rose.com#UFOSituationType
+:UFOSituationType rdf:type owl:NamedIndividual .
+
+
+###  http://rose.com#Value
+:Value rdf:type owl:NamedIndividual ,
+                gufo:Kind .
+
+
+###  http://rose.com#ValueAscription
+:ValueAscription rdf:type owl:NamedIndividual ,
+                          gufo:Kind .
+
+
+###  http://rose.com#ValueAssessor
+:ValueAssessor rdf:type owl:NamedIndividual ,
+                        gufo:RoleMixin .
+
+
+###  http://rose.com#ValueEnabler
+:ValueEnabler rdf:type owl:NamedIndividual ,
+                       gufo:RoleMixin .
+
+
+###  http://rose.com#ValueEvent
+:ValueEvent rdf:type owl:NamedIndividual ,
+                     gufo:EventType .
+
+
+###  http://rose.com#ValueExperience
+:ValueExperience rdf:type owl:NamedIndividual ,
+                          gufo:EventType .
+
+
+###  http://rose.com#ValueObject
+:ValueObject rdf:type owl:NamedIndividual ,
+                      gufo:RoleMixin .
+
+
+###  http://rose.com#ValueSubject
+:ValueSubject rdf:type owl:NamedIndividual ,
+                       gufo:RoleMixin .
+
+
+###  http://rose.com#Vulnerability
+:Vulnerability rdf:type owl:NamedIndividual ,
+                        gufo:RoleMixin .
+
+
+###  http://rose.com#VulnerabilityType
+:VulnerabilityType rdf:type owl:NamedIndividual .
+
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Attack rdfs:label "Attack"@en .
+
+
+:Attacker rdfs:label "Attacker"@en .
+
+
+:CausalLikelihood rdfs:label "Causal Likelihood"@en .
+
+
+:ControlCapability rdfs:label "Control Capability"@en .
+
+
+:ControlCapabilityType rdfs:label "Control Capability Type"@en ;
+                       gufo:categorizes :ControlCapability .
+
+
+:ControlChainEvent rdfs:label "Control Chain Event"@en .
+
+
+:ControlEvent rdfs:label "Control Event"@en .
+
+
+:ControlEventType gufo:categorizes :ControlEvent ;
+                  rdfs:label "Control Event Type"@en .
+
+
+:ControlledSituation rdfs:label "Controlled Situation"@en .
+
+
+:ControlledSituationType rdfs:label "Controlled Situation Type"@en ;
+                         gufo:categorizes :ControlledSituation .
+
+
+:Disposition rdfs:label "Disposition"@en .
+
+
+:ExperienceRiskAssesment rdfs:label "Experience Risk Assesment"@en .
+
+
+:ExperienceValueAsc rdfs:label "Experience Value Asc."@en .
+
+
+:GenericIntention rdfs:label "Generic Intention"@en .
+
+
+:ImpactEvent rdfs:label "Impact Event"@en .
+
+
+:ImpactfulOutcome rdfs:label "Impactful Outcome"@en .
+
+
+:Intention rdfs:label "Intention"@en .
+
+
+:IntentionType rdfs:label "Intention Type"@en ;
+               gufo:categorizes :Intention .
+
+
+:LossEvent rdfs:label "Loss Event"@en .
+
+
+:LossEventType gufo:categorizes :LossEvent ;
+               rdfs:label "Loss Event Type"@en .
+
+
+:LossSituation rdfs:label "Loss Situation"@en .
+
+
+:LossSituationType gufo:categorizes :LossSituation ;
+                   rdfs:label "Loss Situation Type"@en .
+
+
+:LossTriggeringSituation rdfs:label "Loss Triggering Situation"@en .
+
+
+:LossTriggeringSituationType rdfs:label "Loss Triggering Situation Type"@en .
+
+
+:ObjectAtRisk rdfs:label "Object at Risk"@en .
+
+
+:ObjectRiskAssesment rdfs:label "Object Risk Assesment"@en .
+
+
+:ObjectValueAsc rdfs:label "Object Value Asc."@en .
+
+
+:ProtectedSubject rdfs:label "Protected Subject"@en .
+
+
+:ProtectionEvent rdfs:label "Protection Event"@en .
+
+
+:ProtectionTrigger rdfs:label "Protection Trigger"@en .
+
+
+:Risk rdfs:label "Risk"@en .
+
+
+:RiskAssessment rdfs:label "Risk Assessment"@en .
+
+
+:RiskAssessor rdfs:label "Risk Assessor"@en .
+
+
+:RiskEnabler rdfs:label "Risk Enabler"@en .
+
+
+:RiskEvent rdfs:label "Risk Event"@en .
+
+
+:RiskEventType gufo:categorizes :RiskEvent ;
+               rdfs:label "Risk Event Type"@en .
+
+
+:RiskExperience rdfs:label "Risk Experience"@en .
+
+
+:RiskSubject rdfs:label "Risk Subject"@en .
+
+
+:SecurityDesigner rdfs:label "Security Designer"@en .
+
+
+:SecurityMechanism rdfs:label "Security Mechanism"@en .
+
+
+:SpecificIntention rdfs:label "Specific Intention"@en .
+
+
+:ThreatCapability rdfs:label "Threat Capability"@en .
+
+
+:ThreatCapabilityType gufo:categorizes :ThreatCapability ;
+                      rdfs:label "Threat Capability Type"@en .
+
+
+:ThreatEvent rdfs:label "Threat Event"@en .
+
+
+:ThreatEventType gufo:categorizes :ThreatEvent ;
+                 rdfs:label "Threat Event Type"@en .
+
+
+:ThreatObject rdfs:label "Threat Object"@en .
+
+
+:ThreateningSituation rdfs:label "Threatening Situation"@en .
+
+
+:ThreateningSituationType gufo:categorizes :ThreateningSituation ;
+                          rdfs:label "Threatening Situation Type"@en .
+
+
+:TriggerEvent rdfs:label "Trigger Event"@en .
+
+
+:TriggeringLikelihood rdfs:label "Triggering Likelihood"@en .
+
+
+:UFOAction rdfs:label "UFO::Action"@en .
+
+
+:UFOAgent rdfs:label "UFO::Agent"@en .
+
+
+:UFOEvent gufo:categorizes :UFOEventType ;
+          rdfs:label "UFO::Event"@en .
+
+
+:UFOEventType rdfs:label "UFO::Event Type"@en .
+
+
+:UFOSituation rdfs:label "UFO::Situation"@en ;
+              gufo:categorizes :UFOSituationType .
+
+
+:UFOSituationType rdfs:label "UFO::Situation Type"@en .
+
+
+:Value rdfs:label "Value"@en .
+
+
+:ValueAscription rdfs:label "Value Ascription"@en .
+
+
+:ValueAssessor rdfs:label "Value Assessor"@en .
+
+
+:ValueEnabler rdfs:label "Value Enabler"@en .
+
+
+:ValueEvent rdfs:label "Value Event"@en .
+
+
+:ValueExperience rdfs:label "Value Experience"@en .
+
+
+:ValueObject rdfs:label "Value Object"@en .
+
+
+:ValueSubject rdfs:label "Value Subject"@en .
+
+
+:Vulnerability rdfs:label "Vulnerability"@en .
+
+
+:VulnerabilityType rdfs:label "Vulnerability Type"@en ;
+                   gufo:categorizes :Vulnerability .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
