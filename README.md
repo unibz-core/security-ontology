@@ -32,4 +32,4 @@ ROSE is a well-founded reference ontology, specified in OntoUML modeling languag
 
 ## Errata
 
-- In ROSE, the cardinality of << characterization >> relation between Intention and subjects (Risk Subject, Attacker, Protected Subject, and Security Designer) should be 0...1, instead of 1, as it is written in the paper. This repository already contains the corrected version.
+- In ROSE, the cardinality of << characterization >> relation between Intention and subjects (Risk Subject, Attacker, Protected Subject, and Security Designer) should be 0...1, instead of 1, as it is written in the paper. This repository contains the corrected version.
