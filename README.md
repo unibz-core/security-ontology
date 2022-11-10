@@ -34,4 +34,4 @@ PURL: https://purl.org/security-ontology
 
 ## Errata
 
-- In ROSE, the cardinality of << characterization >> relation between Intention and subjects (Risk Subject, Attacker, Protected Subject, and Security Designer) should be 0...1, instead of 1, as it is written in the paper. This repository contains the corrected version.
+- In ROSE, the cardinality of << characterization >> relation between Intention and subjects (Risk Subject, Attacker, Protected Subject, and Security Designer) should be 0...1, instead of 1, as it is written in the ER paper. This repository contains the corrected version.
