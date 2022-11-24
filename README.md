@@ -21,7 +21,7 @@ PURL: https://purl.org/security-ontology
 
 ## Video presentation
 
-[<img src="https://i.ytimg.com/vi/ZK8onlp7j0w/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=ZK8onlp7j0w "Watch the video 55")
+[<img src="https://i.ytimg.com/vi/ZK8onlp7j0w/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=ZK8onlp7j0w "Watch the video")
 
 ## Authors
 
