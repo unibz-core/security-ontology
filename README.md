@@ -21,7 +21,7 @@ PURL: https://purl.org/security-ontology
 
 ## Video presentation
 
-[![Watch the video](https://img.youtube.com/vi/ZK8onlp7j0w/hqdefault.jpg)](https://www.youtube.com/watch?v=ZK8onlp7j0w)
+[<img src="https://i.ytimg.com/vi/ZK8onlp7j0w/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=ZK8onlp7j0w "Now in Android: 55")
 
 ## Authors
 
