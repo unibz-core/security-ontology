@@ -19,6 +19,10 @@ PURL: https://purl.org/security-ontology
 * [Visual Paradigm](https://www.visual-paradigm.com) - a UML CASE tool that offers a [free community edition version](https://www.visual-paradigm.com/download/community.jsp)
 * The [OntoUML Plugin](https://github.com/OntoUML/ontouml-vp-plugin) for Visual Paradigm
 
+## Video presentation
+
+[![Watch the video](https://img.youtube.com/vi/ZK8onlp7j0w/hqdefault.jpg)](https://www.youtube.com/watch?v=ZK8onlp7j0w)
+
 ## Authors
 
 * **[Ítalo Oliveira](https://sites.google.com/view/italojsoliveira)** - Free University of Bozen-Bolzano, Bolzano, Italy
