@@ -1,6 +1,6 @@
 ## ROSE: A Reference Ontology for Security Engineering
 
-ROSE is a well-founded reference ontology, specified in OntoUML modeling language, that characterizes the concept of security mechanism and explains how it this notion is related to value, risk, and prevention.
+ROSE is a well-founded reference ontology, specified in OntoUML modeling language, that characterizes the concept of security mechanism and explains how this notion is related to value, risk, and prevention.
 
 PURL: https://purl.org/security-ontology
 
@@ -37,5 +37,7 @@ PURL: https://purl.org/security-ontology
 - Oliveira, Í., Sales, T.P., Baratella, R., Fumagalli, M., Guizzardi, G. (2022). An Ontology of Security from a Risk Treatment Perspective. In: Ralyté, J., Chakravarthy, S., Mohania, M., Jeusfeld, M.A., Karlapalem, K. (eds) Conceptual Modeling. ER 2022. Lecture Notes in Computer Science, vol 13607. Springer, Cham. https://doi.org/10.1007/978-3-031-17995-2_26
 
 ## Errata
+
+For questions, commentaries, or reporting mistakes, feel free to use [Issues](https://github.com/unibz-core/security-ontology/issues).
 
 - In ROSE, the cardinality of << characterization >> relation between Intention and subjects (Risk Subject, Attacker, Protected Subject, and Security Designer) should be 0...1, instead of 1, as it is written in the ER paper. This repository contains the corrected version.
